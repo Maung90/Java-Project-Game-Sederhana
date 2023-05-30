@@ -7,8 +7,8 @@ public class Main extends Pertempuran{
 
 	public static void main(String[] args) {
 
-		int a,b,senjata = 0,armor = 0;
-		String namaPlayer,weapon="";
+		int a,b,senjata = 0,armor = 0,level=1;;
+		String namaPlayer,jawaban ="",weapon="";
 		namaPlayer = insertPlayer();
 		a = chooseWeapon();
 		switch(a){
@@ -27,16 +27,28 @@ public class Main extends Pertempuran{
 		duel.setName(namaPlayer);
 		duel.setWeapon(weapon);	
 
-		duel.showPlayer(senjata,armor);
-		
-		System.out.print("1 ");
-		duel.sleep(1);
-		System.out.print("2 ");
-		duel.sleep(1);
-		System.out.print("3...");
-		duel.sleep(1);
+		do{
+			duel.showPlayer(senjata,armor,level);
 
-		duel.battle(senjata,1,armor);
+			System.out.print("1 ");
+			duel.sleep(1);
+			System.out.print("2 ");
+			duel.sleep(1);
+			System.out.print("3...");
+			duel.sleep(1);
+
+			boolean status = duel.battle(senjata,level,armor);
+			
+			if (status == true) {
+				level+=1;
+				input.nextLine();
+				System.out.print("lanjut duel ? ");
+				jawaban = input.nextLine();
+			}else{
+				jawaban = "n";
+			}
+
+		}while(jawaban.equals("y"));
 	}
 
 	public static String insertPlayer(){

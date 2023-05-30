@@ -43,7 +43,7 @@ public class Pertempuran extends Player implements Monster{
 
 	}
 
-	public void battle(int senjata, int level, int armor){
+	public boolean battle(int senjata, int level, int armor){
 		initMonsterData();
 		boolean tf = true;	
 		int hpPlayer = getHp()+armor;
@@ -95,14 +95,16 @@ public class Pertempuran extends Player implements Monster{
 				break;
 			}
 		}
+		return tf;
 	}
-	public void showPlayer(int senjata,int armor){
+	public void showPlayer(int senjata, int armor, int level){
 		cls();
 		System.out.println("|===============================================|");
 		System.out.println("|\t\t\t\t\t\t|");
 		System.out.println("|\t     -> GAME GJLS <-	\t\t|");
 		System.out.println("|\t\t\t\t\t\t|");
 		System.out.println("|\t Nama Player   : "+getName()+"\t\t\t|");
+		System.out.println("|\t Level         : "+level+"\t\t\t|");
 		System.out.println("|\t Senjata       : "+getWeapon()+"\t\t\t|");
 		System.out.println("|\t Hp Player     : "+getHp()+"+("+armor+")\t\t|");
 		System.out.println("|\t Damage Attack : "+getBaseDamage()+"+("+senjata+")"+"\t\t|");
