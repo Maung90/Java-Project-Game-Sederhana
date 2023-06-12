@@ -177,6 +177,7 @@ public class Pertempuran extends Player implements Monster{
 		System.out.println("|\t Nama Player   : "+getName()+"\t\t\t|");
 		System.out.println("|\t Level         : "+getLevel()+"\t\t\t|");
 		System.out.println("|\t Senjata       : "+getWeapon()+"\t\t\t|");
+		System.out.println("|\t Armor         : "+getNameArmor()+"\t\t\t|");
 		System.out.println("|\t Hp Player     : "+getHp()+"+("+getDefend()+")\t\t|");
 		System.out.println("|\t Damage Attack : "+getBaseDamage()+"+("+getDamageWeapon()+")"+"\t\t|");
 		System.out.println("|\t\t\t\t\t\t|");

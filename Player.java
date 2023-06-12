@@ -2,7 +2,7 @@ import java.util.Random;
 class Player{
 	private String name;
 	private String weapon = "batu"; // nama senjata
-	private String nameArmor; // nama defend
+	private String nameArmor = "-"; // nama defend
 	private int hp;
 	private int damageWeapon; // damage senjata
 	private int defend; //effect armor
@@ -10,7 +10,7 @@ class Player{
 	private int level = 1;
 
 	public Player(){
-		this.hp = 1200;
+		this.hp = 1000;
 		this.defend = 50;
 		this.baseDamage = 150;
 	}

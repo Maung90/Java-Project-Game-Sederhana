@@ -41,9 +41,11 @@ public class Main extends Pertempuran{
 				System.out.println("|=======================================|");
 				System.out.println("|                                       |");
 				System.out.println(" \t --- Pilih Senjata --- ");
+				int nomor2 = 1;
 				for (int i=1; i<=duel.itemPlayer.size(); i++) {
 					if (duel.itemPlayer.get(i-1).getJenis().equals("senjata")) {
-						System.out.println("\t"+i+". " + duel.itemPlayer.get(i-1).getNameItem());
+						System.out.println("\t"+nomor2+". " + duel.itemPlayer.get(i-1).getNameItem());
+					nomor2++;
 					}
 				}
 				String selectWeapon;
@@ -52,6 +54,7 @@ public class Main extends Pertempuran{
 					System.out.println("|=======================================|");
 					System.out.print("\n \t masukan nama senjata : ");
 					selectWeapon = input.next();
+
 					for (int i=1; i<=duel.itemPlayer.size(); i++) {
 						if (duel.itemPlayer.get(i-1).getJenis().equals("senjata")) {
 							if (duel.itemPlayer.get(i-1).getNameItem().equalsIgnoreCase(selectWeapon)) {
@@ -74,9 +77,11 @@ public class Main extends Pertempuran{
 				System.out.println("|=======================================|");
 				System.out.println("|                                       |");
 				System.out.println("\t --- Pilih Armor --- ");
+				int nomor = 1;
 				for (int i=1; i<=duel.itemPlayer.size(); i++) {
 					if (duel.itemPlayer.get(i-1).getJenis().equals("armor")) {
-						System.out.println("\t"+i+". " +duel.itemPlayer.get(i-1).getNameItem());
+						System.out.println("\t"+nomor+". " +duel.itemPlayer.get(i-1).getNameItem());
+						nomor++;
 					}
 				}
 				if (duel.itemPlayer.size() > 0) {
