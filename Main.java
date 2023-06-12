@@ -1,54 +1,117 @@
 import java.util.Random;
 import java.util.Scanner;
 import java.util.InputMismatchException;
+import java.util.ArrayList;
 public class Main extends Pertempuran{
 	static Scanner input = new Scanner(System.in);
 	static Pertempuran duel = new Pertempuran();
 
 	public static void main(String[] args) {
-
-		int a,b,senjata = 0,armor = 0,level=1;;
-		String namaPlayer,jawaban ="",weapon="";
-		namaPlayer = insertPlayer();
-		a = chooseWeapon();
-		switch(a){
-		case 1 : weapon ="Panah"; senjata = 150; break;
-		case 2 : weapon ="Batu"; senjata = 100;break;
-		case 3 : weapon = "Katana"; senjata = 250;break;
-		default : weapon ="Bambu"; senjata = 200;break;
-		}
-		b = chooseArmor();
-		switch(b){
-		case 1 -> armor = 150;
-		case 2 -> armor = 100;
-		case 3 -> armor = 250;
-		default -> armor = 200;
-		}
+		// duel.setHp();
+		String namaPlayer = insertPlayer();
 		duel.setName(namaPlayer);
-		duel.setWeapon(weapon);	
-
+		duel.initQuest();
 		do{
-			duel.showPlayer(senjata,armor,level);
+			menu();
+			int pil1 = choose();
+			switch(pil1){
+			case 1 :  
+				duel.showPlayer(); duel.sleep(4);
+				break;
+			case 2 : 
+				quest(); 
+				break;
+			case 3:
+				if (duel.itemPlayer.size()> 0) {
+					System.out.println("|=======================================|");
+					System.out.println("|                                       |");
+					for (int i=1;i<=duel.itemPlayer.size();i++ ) {
+						System.out.println("\t " + i + " " +duel.itemPlayer.get(i-1).getNameItem());
+					}
+					System.out.println("|                                       |");
+					System.out.println("|=======================================|");
+					duel.sleep(2);
+				}else{
+					System.out.println(" belum punya item ");
+					duel.sleep(2);
+				}
+				break;
+				
+			case 4: 
+				System.out.println("|=======================================|");
+				System.out.println("|                                       |");
+				System.out.println(" \t --- Pilih Senjata --- ");
+				for (int i=1; i<=duel.itemPlayer.size(); i++) {
+					if (duel.itemPlayer.get(i-1).getJenis().equals("senjata")) {
+						System.out.println("\t"+i+". " + duel.itemPlayer.get(i-1).getNameItem());
+					}
+				}
+				String selectWeapon;
+				if (duel.itemPlayer.size() > 0) {
+					System.out.println("|                                       |");
+					System.out.println("|=======================================|");
+					System.out.print("\n \t masukan nama senjata : ");
+					selectWeapon = input.next();
+					for (int i=1; i<=duel.itemPlayer.size(); i++) {
+						if (duel.itemPlayer.get(i-1).getJenis().equals("senjata")) {
+							if (duel.itemPlayer.get(i-1).getNameItem().equalsIgnoreCase(selectWeapon)) {
+								duel.setWeapon(selectWeapon);
+								duel.setDamageWeapon(duel.itemPlayer.get(i-1).getItemEffect());
+							// System.out.println("Anda memilih senjata : "+selectWeapon);
+							}else{
+								System.out.println(" \t Senjata tidak tersedia");
+							}
+						}
+					}
+				}else{
+					System.out.println("      Belum Memiliki Senjata  ");
+					System.out.println("|                                       |");
+					System.out.println("|=======================================|");
+				}
+				duel.sleep(2);
+				break;
+			case 5: 
+				System.out.println("|=======================================|");
+				System.out.println("|                                       |");
+				System.out.println("\t --- Pilih Armor --- ");
+				for (int i=1; i<=duel.itemPlayer.size(); i++) {
+					if (duel.itemPlayer.get(i-1).getJenis().equals("armor")) {
+						System.out.println("\t"+i+". " +duel.itemPlayer.get(i-1).getNameItem());
+					}
+				}
+				if (duel.itemPlayer.size() > 0) {
+					System.out.println("|                                       |");
+					System.out.println("|=======================================|");
+					String selectArmor;
+					System.out.print("\n \t masukan nama armor : ");
+					selectArmor = input.next();
+					for (int i=1; i<=duel.itemPlayer.size(); i++) {
+						if (duel.itemPlayer.get(i-1).getJenis().equals("armor")) {
+							if (duel.itemPlayer.get(i-1).getNameItem().equalsIgnoreCase(selectArmor)) {
+								duel.setNameArmor(selectArmor);
+								duel.setDefend(duel.itemPlayer.get(i-1).getItemEffect());
+							// System.out.println("Anda memilih senjata : "+selectArmor);
+							}else{
+								System.out.println(" \t Senjata tidak tersedia");
+							}
+						}
+					}
+				}else{
+					System.out.println("      Belum Memiliki Senjata  ");
+					System.out.println("|                                       |");
+					System.out.println("|=======================================|");
+				}
+				duel.sleep(2);
+				break;
+			default : 
+				return;
+			}	
+		}while(true);
 
-			System.out.print("1 ");
-			duel.sleep(1);
-			System.out.print("2 ");
-			duel.sleep(1);
-			System.out.print("3...");
-			duel.sleep(1);
 
-			boolean status = duel.battle(senjata,level,armor);
-			
-			if (status == true) {
-				level+=1;
-				input.nextLine();
-				System.out.print("lanjut duel ? ");
-				jawaban = input.nextLine();
-			}else{
-				jawaban = "n";
-			}
 
-		}while(jawaban.equals("y"));
+
+
 	}
 
 	public static String insertPlayer(){
@@ -63,48 +126,58 @@ public class Main extends Pertempuran{
 		System.out.println("|=======================================|");
 		duel.sleep(1);
 		return nama;
-
 	}
-	public static int chooseWeapon(){
+	public static void menu(){
 		duel.cls();
 		System.out.println("|=======================================|");
-		System.out.println("| 1. Panah               damage : 150   |");
-		System.out.println("| 2. Batu                damage : 100   |");
-		System.out.println("| 3. Katana              damage : 250   |");
-		System.out.println("| ... Bambu              damage : 200   |");
+		System.out.println("|              Menu                     |");
+		System.out.println("|                                       |");
+		System.out.println("|          1. Info Player               |");
+		System.out.println("|          2. Quest                     |");
+		System.out.println("|          3. Item's                    |");
+		System.out.println("|          4. Pilih Senjata             |");
+		System.out.println("|          5. Pilih Armor               |");
+		System.out.println("|                                       |");
 		System.out.println("|=======================================|");
-		try{
-			System.out.print(" masukan pilihan      : ");
-			int a = input.nextInt();
-			duel.sleep(1);
-			return a;
-		}catch(InputMismatchException e){
-			input.nextLine();
-			System.out.println("Input Yang Anda Masukan Salah !");
-			duel.sleep(2);
-			return 0;
-		}
+
+	}
+	public static int choose(){
+		boolean status = true;
+		int a;
+		do{
+			try{
+				System.out.print("     pilih menu  : ");
+				a = input.nextInt();
+				status = false;
+			}catch(InputMismatchException e){
+				input.nextLine();
+				System.out.println(" pilihan tidak ada ");
+				status = true;
+				a=0;
+
+			}
+		}while(status == true);
+
+		return a;
 	}
 
+	public static void quest(){
 
-	public static int chooseArmor(){
-		duel.cls();
-		System.out.println("|=======================================|");
-		System.out.println("| 1. Blade Armor         defend : 150   |");
-		System.out.println("| 2. Vest lvl 3          defend : 100   |");
-		System.out.println("| 3. Helm lvl 3          defend : 250   |");
-		System.out.println("| ... Imorrtal           defend : 200   |");
-		System.out.println("|=======================================|");
-		try{
-			System.out.print(" masukan pilihan      : ");
-			int a = input.nextInt();
-			duel.sleep(1);
-			return a;
-		}catch(InputMismatchException e){
-			input.nextLine();
-			System.out.println("Input Yang Anda Masukan Salah !");
-			duel.sleep(2);
-			return 0;
+		boolean status;
+		duel.showQuest();
+		int a = choose();
+
+		status = duel.prosesQuest(a);
+		if (status) {
+			System.out.println("|=======================================|");
+			System.out.println("|                                       |");
+			System.out.println("|                Level Up               |");
+			System.out.println("|                                       |");
+			System.out.println("|=======================================|");
+			duel.setLevel(1);
+			duel.setHp(duel.getHp(),duel.getLevel(),100);
 		}
+		duel.sleep(2);
 	}
+	
 }
