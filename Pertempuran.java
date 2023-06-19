@@ -80,35 +80,45 @@ public class Pertempuran extends Player implements Monster{
 	}
 	public boolean prosesQuest(int a){
 		initItems();
-		
 		boolean status = false;
 		int armor = getDefend();
 		int senjata = getDamageWeapon();
 
-		System.out.println("|=======================================|");
-		System.out.println("|                                       |");
-		System.out.println(" \t "+quest.get(a-1));
-		System.out.println("|                                       |");
-		System.out.println("|=======================================|");
-
-		status = battle(senjata,armor,a);
-		if (status) {
+		// if (a <= jenisMonster.size()-1) {
 
 			System.out.println("|=======================================|");
 			System.out.println("|                                       |");
-			System.out.println("      -- Selamat Anda Mendapat -- ");
-			System.out.println("           " +gachaItem().getNameItem());
+			System.out.println(" \t "+quest.get(a-1));
 			System.out.println("|                                       |");
 			System.out.println("|=======================================|");
 
-			quest.remove(a-1);
-			jenisMonster.remove(a-1);
-			hpMonster.remove(a-1);
-			baseDamageMonster.remove(a-1);
+			status = battle(senjata,armor,a);
+			if (status) {
 
-		}else{
-			System.out.println("Anda Kalah!");
-		}
+				System.out.println("|=======================================|");
+				System.out.println("|                                       |");
+				System.out.println("      -- Selamat Anda Mendapat -- ");
+				System.out.println("           " +gachaItem().getNameItem());
+				System.out.println("|                                       |");
+				System.out.println("|=======================================|");
+
+				quest.remove(a-1);
+				jenisMonster.remove(a-1);
+				hpMonster.remove(a-1);
+				baseDamageMonster.remove(a-1);
+
+			}else{
+				System.out.println("Anda Kalah!");
+			}
+		// }else{
+
+		// 	System.out.println("|=======================================|");
+		// 	System.out.println("|                                       |");
+		// 	System.out.println("|    input yang anda masukan salah      |");
+		// 	System.out.println("|                                       |");
+		// 	System.out.println("|=======================================|");
+		// }
+		
 		return status;
 
 	}

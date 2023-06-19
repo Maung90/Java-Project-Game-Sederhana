@@ -15,4 +15,4 @@
 
 
 
-Game Petualangan: Buat game petualangan berbasis teks di mana pemain dapat menjelajahi dunia fiksi, mengumpulkan item, dan menyelesaikan misi.
+Game Petualangan: game petualangan berbasis teks di mana pemain dapat menjelajahi dunia fiksi, mengumpulkan item, dan menyelesaikan misi.
