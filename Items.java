@@ -11,8 +11,7 @@ class Items{
 
 	public String getNameItem(){
 		return this.nameItem;
-	}
-
+	} 
 	public void setNameItem(String nameItem){
 		this.nameItem = nameItem;
 	}

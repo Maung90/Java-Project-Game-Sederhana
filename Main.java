@@ -7,7 +7,7 @@ public class Main extends Pertempuran{
 	static Pertempuran duel = new Pertempuran();
 
 	public static void main(String[] args) {
-		// duel.setHp();
+
 		String namaPlayer = insertPlayer();
 		duel.setName(namaPlayer);
 		duel.initQuest();
@@ -25,8 +25,9 @@ public class Main extends Pertempuran{
 				if (duel.itemPlayer.size()> 0) {
 					System.out.println("|=======================================|");
 					System.out.println("|                                       |");
+					System.out.println("|             LIST ITEM                 |");
 					for (int i=1;i<=duel.itemPlayer.size();i++ ) {
-						System.out.println("\t " + i + " " +duel.itemPlayer.get(i-1).getNameItem());
+						System.out.println("\t " + i + ". " +duel.itemPlayer.get(i-1).getNameItem());
 					}
 					System.out.println("|                                       |");
 					System.out.println("|=======================================|");
@@ -52,8 +53,7 @@ public class Main extends Pertempuran{
 				return;
 			}	
 		}while(true);
-	}
-
+	} 
 	public static String insertPlayer(){
 		duel.welcomeKalimat();
 		duel.cls();

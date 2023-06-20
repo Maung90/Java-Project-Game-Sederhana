@@ -13,16 +13,14 @@ class Player{
 		this.hp = 1000;
 		this.defend = 50;
 		this.baseDamage = 150;
-	}
-
+	} 
 	public Player(String name, String weapon){
 		this.name = name;
 		this.weapon = weapon;
 		this.hp = hp;
 		this.defend = defend;
 		this.baseDamage = baseDamage;
-	}
-
+	} 
 	public void showPlayer(){
 		System.out.println("Name Char    : " + this.name);
 		System.out.println("HP           : " + this.hp);
@@ -30,14 +28,19 @@ class Player{
 		System.out.println("Defend       : " + this.defend);
 		System.out.println("Base Damage  : " + this.baseDamage);
 	}
-	
+	public void sleep(){
+		try{
+			Thread.sleep(1000);
+		}catch(Exception e){
+			System.err.println(e);
+		}
+	}
 	// terima damage
 	public int terimaDamageMonster(int maxDamageEnemy){
 		Random dice = new Random();
 		int damageEnemy = dice.nextInt(50,maxDamageEnemy);
 		return damageEnemy;
-	}
-
+	} 
 	// Getter & Setter
 	public String getName(){
 		return this.name;

@@ -56,7 +56,6 @@ public class Pertempuran extends Player implements Monster{
 		baseDamageMonster.add(750);
 
 	}
-
 	public void initQuest(){
 
 		quest.add("Membunuh pasukan slime");
@@ -84,45 +83,34 @@ public class Pertempuran extends Player implements Monster{
 		int armor = getDefend();
 		int senjata = getDamageWeapon();
 
-		// if (a <= jenisMonster.size()-1) {
+		System.out.println("|=======================================|");
+		System.out.println("|                                       |");
+		System.out.println(" \t "+quest.get(a-1));
+		System.out.println("|                                       |");
+		System.out.println("|=======================================|");
+
+		status = battle(senjata,armor,a);
+		if (status) {
 
 			System.out.println("|=======================================|");
 			System.out.println("|                                       |");
-			System.out.println(" \t "+quest.get(a-1));
+			System.out.println("      -- Selamat Anda Mendapat -- ");
+			System.out.println("           " +gachaItem().getNameItem());
 			System.out.println("|                                       |");
 			System.out.println("|=======================================|");
 
-			status = battle(senjata,armor,a);
-			if (status) {
+			quest.remove(a-1);
+			jenisMonster.remove(a-1);
+			hpMonster.remove(a-1);
+			baseDamageMonster.remove(a-1);
 
-				System.out.println("|=======================================|");
-				System.out.println("|                                       |");
-				System.out.println("      -- Selamat Anda Mendapat -- ");
-				System.out.println("           " +gachaItem().getNameItem());
-				System.out.println("|                                       |");
-				System.out.println("|=======================================|");
-
-				quest.remove(a-1);
-				jenisMonster.remove(a-1);
-				hpMonster.remove(a-1);
-				baseDamageMonster.remove(a-1);
-
-			}else{
-				System.out.println("Anda Kalah!");
-			}
-		// }else{
-
-		// 	System.out.println("|=======================================|");
-		// 	System.out.println("|                                       |");
-		// 	System.out.println("|    input yang anda masukan salah      |");
-		// 	System.out.println("|                                       |");
-		// 	System.out.println("|=======================================|");
-		// }
+		}else{
+			System.out.println("Anda Kalah!");
+		}
 		
 		return status;
 
 	}
-
 	public boolean battle(int senjata, int armor,int a){
 		initMonsterData();
 		boolean tf = true;	
@@ -136,39 +124,46 @@ public class Pertempuran extends Player implements Monster{
 				sleep(1);
 				cls();
 				System.out.println("INI WAVE KE : " + i);
-				System.out.println("==============================================");
-				System.out.println("\t Hp "+getName()+"  \t\t Hp "+namaMonster);
-				System.out.println("\t    "+hpPlayer+" \t\t    "+hpEnemy);
-				System.out.println("==============================================");
+				System.out.println("|=======================================|");
+				System.out.println("|                                       |");
+				System.out.println(" Hp "+getName()+"  \t\t Hp "+namaMonster);
+				System.out.println("    "+hpPlayer+" \t\t    "+hpEnemy);
+				System.out.println("|                                       |");
+				System.out.println("|=======================================|");
 				if (hpPlayer <= 0) {
 					hpPlayer = 0;
 					cls();
-					System.out.println("==============================================");
-					System.out.println("Hp "+getName()+"  \t\t\t Hp "+namaMonster);
+					System.out.println("|=======================================|");
+					System.out.println("|                                       |");
+					System.out.println(" Hp "+getName()+"  \t\t\t Hp "+namaMonster);
 					System.out.println("   "+hpPlayer+" \t\t\t    "+hpEnemy);
-					System.out.println(getName() + " telah wafat ");
+					System.out.println("\n"+getName() + " telah Kalah ");
 					tf = false;
 					break;
 				}else{
 					int damageEnemy = terimaDamageMonster(damageMonster);
 					hpPlayer -= damageEnemy;
-					System.out.println(namaMonster + " memberikan damage sebesar : " +damageEnemy);
+					System.out.println("\n"+namaMonster + " memberikan damage sebesar : " +damageEnemy);
 				} 
 
 				if (hpEnemy <= 0) {
 					hpEnemy = 0;
 					cls();
-					System.out.println("==============================================");
-					System.out.println("Hp "+getName()+"  \t\t\t Hp "+namaMonster);
-					System.out.println("   "+hpPlayer+" \t\t\t    "+hpEnemy);
-					System.out.println(namaMonster + " telah Wafat");
+					System.out.println("|=======================================|");
+					System.out.println("|                                       |");
+					System.out.println(" Hp "+getName()+"  \t\t Hp "+namaMonster);
+					System.out.println("   "+hpPlayer+" \t\t    "+hpEnemy);
+					System.out.println("      "+ namaMonster + " telah Kalah");
+					System.out.println("|                                       |");
+					System.out.println("|=======================================|");
 					break;
 				}else{
 					int damagePlayer = terimaDamagePlayer(getBaseDamage(),senjata);
 					hpEnemy -= damagePlayer;
 					System.out.println(getName() + " memberikan damage sebesar : " +damagePlayer);
 				}
-				System.out.println("\n==============================================");
+				System.out.println("|                                       |");
+				System.out.println("|=======================================|");
 				sleep(2);
 			}
 			i++;
@@ -178,6 +173,7 @@ public class Pertempuran extends Player implements Monster{
 		}
 		return tf;
 	}
+	//overreading dari class player
 	public void showPlayer(){
 		cls();
 		System.out.println("|===============================================|");
@@ -193,7 +189,6 @@ public class Pertempuran extends Player implements Monster{
 		System.out.println("|\t\t\t\t\t\t|");
 		System.out.println("|===============================================|");
 	}
-
 	public Items gachaItem() {
 		Random dice = new Random();
 		int index = dice.nextInt(0,items.size());
@@ -202,41 +197,11 @@ public class Pertempuran extends Player implements Monster{
 		sleep(1);
 		return items.get(index);
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	public int terimaDamagePlayer(int maxDamagePlayer,int senjata){
 		Random dice = new Random();
 		int damagePlayer = dice.nextInt(50,maxDamagePlayer);
 		return damagePlayer;
 	}
-
 	public void welcomeKalimat(){
 		cls();
 		System.out.println("|=======================================|");
@@ -259,6 +224,7 @@ public class Pertempuran extends Player implements Monster{
 			System.out.println("Tidak Bisa Clear Screen");
 		}
 	}
+	// overloading dari class player
 	public void sleep(long n){
 		long second = n * 1000;
 		try{
