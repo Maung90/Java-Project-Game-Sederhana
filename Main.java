@@ -132,7 +132,7 @@ public class Main extends Pertempuran{
 
 	}
 	public static void	chooseWeapon(){
-		int z = 0;
+		int z = 0, exist = 0;
 		for (int i=1; i<=duel.itemPlayer.size(); i++) {
 			if (duel.itemPlayer.get(i-1).getJenis().equals("senjata")) {
 				z++;
@@ -165,13 +165,20 @@ public class Main extends Pertempuran{
 
 				for (int i=1; i<=duel.itemPlayer.size(); i++) {
 					if (duel.itemPlayer.get(i-1).getJenis().equals("senjata")) {
-						if (duel.itemPlayer.get(i-1).getNameItem().equalsIgnoreCase(selectWeapon)) {
-							duel.setWeapon(selectWeapon);
-							duel.setDamageWeapon(duel.itemPlayer.get(i-1).getItemEffect());
-						}else{
-							System.out.println(" \t Senjata tidak tersedia");
+						if (!duel.itemPlayer.get(i-1).getNameItem().equalsIgnoreCase(selectWeapon)) {
+							exist = 0;
+						}
+						else{
+							exist = i;
+							break;
 						}
 					}
+				}
+				if (exist == 0) {
+					System.out.println(" \t Senjata tidak tersedia");
+				}else{
+					duel.setWeapon(selectWeapon);
+					duel.setDamageWeapon(duel.itemPlayer.get(exist-1).getItemEffect());
 				}
 			}else{
 				System.out.println("|=======================================|");
@@ -183,7 +190,7 @@ public class Main extends Pertempuran{
 		}
 	}
 	public static void	chooseArmor(){
-		int z = 0;
+		int z = 0, exist = 0;
 		for (int i=1; i<=duel.itemPlayer.size(); i++) {
 			if (duel.itemPlayer.get(i-1).getJenis().equals("armor")) {
 				z++;
@@ -214,14 +221,18 @@ public class Main extends Pertempuran{
 				selectArmor = input.next();
 				for (int i=1; i<=duel.itemPlayer.size(); i++) {
 					if (duel.itemPlayer.get(i-1).getJenis().equals("armor")) {
-						if (duel.itemPlayer.get(i-1).getNameItem().equalsIgnoreCase(selectArmor)) {
-							duel.setNameArmor(selectArmor);
-							duel.setDefend(duel.itemPlayer.get(i-1).getItemEffect());
-							// System.out.println("Anda memilih senjata : "+selectArmor);
+						if (!duel.itemPlayer.get(i-1).getNameItem().equalsIgnoreCase(selectArmor)) {
+							exist = 0;
 						}else{
-							System.out.println(" \t Armor tidak tersedia");
+							exist = i;
 						}
 					}
+				}
+				if (exist==0) {
+					System.out.println(" \t Armor tidak tersedia");
+				}else{
+					duel.setNameArmor(selectArmor);
+					duel.setDefend(duel.itemPlayer.get(exist-1).getItemEffect());
 				}
 			}else{
 				System.out.println("      Belum Memiliki Armor  ");

@@ -51,9 +51,9 @@ public class Pertempuran extends Player implements Monster{
 		baseDamageMonster.add(100);
 		baseDamageMonster.add(150);
 
+		baseDamageMonster.add(200);
+		baseDamageMonster.add(250);
 		baseDamageMonster.add(350);
-		baseDamageMonster.add(550);
-		baseDamageMonster.add(750);
 
 	}
 	public void initQuest(){
