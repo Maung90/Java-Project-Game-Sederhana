@@ -8,15 +8,22 @@ public class Pertempuran extends Player implements Monster{
 	public ArrayList <Items> items = new ArrayList <Items>();
 	public ArrayList <Items> itemPlayer = new ArrayList <Items>();
 	public ArrayList<String> quest = new ArrayList<String>();
+
 	public Scanner input = new Scanner(System.in);
 
 	public void initItems(){
-		Items item = new Items("Bambu",150,"senjata");
-		Items item2 = new Items("zirah-kayu",130,"armor");
-		Items item3 = new Items("Pedang",200,"senjata");
-		Items item4 = new Items("zirah-besi",200,"armor");
-		Items item5 = new Items("Katana",250,"senjata");
-		Items item6 = new Items("zirah-Baja",250,"armor");
+		Items item = new Items("BAMBU",150,"senjata");
+		Items item2 = new Items("ZIRAH-KAYU",130,"armor");
+		Items item3 = new Items("PEDANG",200,"senjata");
+		Items item4 = new Items("ZIRAH-BESI",200,"armor");
+		Items item5 = new Items("KATANA",250,"senjata");
+		Items item6 = new Items("ZIRAH-BAJA",300,"armor");
+		Items item7 = new Items("TONGKAT",150,"senjata");
+		Items item8 = new Items("HELM-KAYU",230,"armor");
+		Items item9 = new Items("TOMBAK",200,"senjata");
+		Items item10 = new Items("HELM-BESI",200,"armor");
+		Items item11 = new Items("PISTOL",300,"senjata");
+		Items item12 = new Items("HELM-BAJA",250,"armor");
 
 		items.add(item);
 		items.add(item2);
@@ -24,6 +31,12 @@ public class Pertempuran extends Player implements Monster{
 		items.add(item4);
 		items.add(item5);
 		items.add(item6);
+		items.add(item7);
+		items.add(item8);
+		items.add(item9);
+		items.add(item10);
+		items.add(item11);
+		items.add(item12);
 
 	}
 	public void initMonsterData(){
@@ -67,27 +80,29 @@ public class Pertempuran extends Player implements Monster{
 	}
 	public void showQuest(){
 		cls();
-		System.out.println("|=======================================|");
-		System.out.println("|                                       |");
-
-		for (int i = 1; i <= quest.size(); i++ ) {
-			System.out.println("  \t" + i + " " + quest.get(i-1) );
-		}
-		System.out.println("|                                       |");
-		System.out.println("|=======================================|");
+		System.out.println("\n\n");
+		System.out.println("\t▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀");
+		System.out.println("\t█                                            █");
+		System.out.println("\t█                                            █");
+			for (int i = 1; i <= quest.size(); i++ ) {
+				System.out.println("  \t\t" + i + " " + quest.get(i-1) );
+			}
+		System.out.println("\t█                                            █");
+		System.out.println("\t█                                            █");
+		System.out.println("\t▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀");
 		
-	}
+		 
+	} 
 	public boolean prosesQuest(int a){
 		initItems();
 		boolean status = false;
+		int senjata = getDamageWeapon(); 
 		int armor = getDefend();
-		int senjata = getDamageWeapon();
-
-		System.out.println("|=======================================|");
-		System.out.println("|                                       |");
-		System.out.println(" \t "+quest.get(a-1));
-		System.out.println("|                                       |");
-		System.out.println("|=======================================|");
+		System.out.println("\t|=======================================|");
+		System.out.println("\t|                                       |");
+		System.out.println("\t \t "+quest.get(a-1));
+		System.out.println("\t|                                       |");
+		System.out.println("\t|=======================================|");
 
 		status = battle(senjata,armor,a);
 		if (status) {
@@ -105,7 +120,11 @@ public class Pertempuran extends Player implements Monster{
 			baseDamageMonster.remove(a-1);
 
 		}else{
-			System.out.println("Anda Kalah!");
+			System.out.println("|=======================================|");
+			System.out.println("|                                       |");
+			System.out.println("\t --> ANDA KALAH! <--");
+			System.out.println("|                                       |");
+			System.out.println("|=======================================|");
 		}
 		
 		return status;
@@ -176,18 +195,21 @@ public class Pertempuran extends Player implements Monster{
 	//overreading dari class player
 	public void showPlayer(){
 		cls();
-		System.out.println("|===============================================|");
-		System.out.println("|\t\t\t\t\t\t|");
-		System.out.println("|\t     -> GAME GJLS <-	\t\t|");
-		System.out.println("|\t\t\t\t\t\t|");
-		System.out.println("|\t Nama Player   : "+getName()+"\t\t\t|");
-		System.out.println("|\t Level         : "+getLevel()+"\t\t\t|");
-		System.out.println("|\t Senjata       : "+getWeapon()+"\t\t\t|");
-		System.out.println("|\t Armor         : "+getNameArmor()+"\t\t\t|");
-		System.out.println("|\t Hp Player     : "+getHp()+"+("+getDefend()+")\t\t|");
-		System.out.println("|\t Damage Attack : "+getBaseDamage()+"+("+getDamageWeapon()+")"+"\t\t|");
-		System.out.println("|\t\t\t\t\t\t|");
-		System.out.println("|===============================================|");
+		System.out.println("\n\n");
+		System.out.println("\t▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀");
+		System.out.println("\t█                                            █");
+		System.out.println("\t█                                            █");
+		System.out.println("\t               INFO PLAYER                   ");
+		System.out.println("\t        NAMA PLAYER   : "+getName());
+		System.out.println("\t        LEVEL         : "+getLevel());
+		System.out.println("\t        SENJATA       : "+getWeapon());
+		System.out.println("\t        ARMOR         : "+getNameArmor());
+		System.out.println("\t        HP PLAYER     : "+getHp()+"+("+getDefend()+")");
+		System.out.println("\t        DAMAGE ATTACK : "+getBaseDamage()+"+("+getDamageWeapon()+")");
+		System.out.println("\t█                                            █");
+		System.out.println("\t█                                            █");
+		System.out.println("\t█                                            █");
+		System.out.println("\t▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀");
 	}
 	public Items gachaItem() {
 		Random dice = new Random();
@@ -201,25 +223,22 @@ public class Pertempuran extends Player implements Monster{
 		Random dice = new Random();
 		int damagePlayer = dice.nextInt(50,maxDamagePlayer);
 		return damagePlayer;
-	}
+	} 	
 	public void welcomeKalimat(){
 		cls();
-		System.out.println("|=======================================|");
-		System.out.println("|\t\t\t\t\t|");
-		System.out.println("|\t         WELCOME     \t\t|");
-		System.out.println("|\t     -> GAME GJLS <-	\t|");
-		System.out.println("|\t\t\t\t\t|");
-		System.out.println("|=======================================|");
-		sleep(1);
-		System.out.print(".");
-		sleep(1);
-		System.out.print(" . ");
-		sleep(1);
-		System.out.print(". ");
+		System.out.println("\n\n\n");
+		System.out.println("\t          █   █ █▀▀ █   █▀▀ █▀▀█ █▀▄▀█ █▀▀");
+		System.out.println("\t          █▄█▄█ █▀▀ █   █   █  █ █ ▀ █ █▀▀"); 
+		System.out.println("\t           ▀ ▀  ▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀▀ ▀   ▀ ▀▀▀");
+		System.out.println("\t ░█▀▀█  █▀▄▀█  █▀▀▄ 　 █▀▀ █ █ █▀▀█ █   █▀▀█ █▀▀█ █▀▀ █▀▀█"); 
+		System.out.println("\t ░█     █ █ █  █ 　█   █▀▀ ▄▀▄ █  █ █   █  █ █▄▄▀ █▀▀ █▄▄▀ ");
+		System.out.println("\t ░█▄▄█  █   █  █▄▄▀ 　 ▀▀▀ ▀ ▀ █▀▀▀ ▀▀▀ ▀▀▀▀ ▀ ▀▀ ▀▀▀ ▀ ▀▀");
+
+		sleep(3);
 	}
 	public void cls(){
 		try{
-			new ProcessBuilder("cmd","/c","cls").inheritIO().start().waitFor();
+			new ProcessBuilder("cmd","/c","clear").inheritIO().start().waitFor();
 		}catch(Exception E){
 			System.out.println("Tidak Bisa Clear Screen");
 		}
@@ -234,3 +253,7 @@ public class Pertempuran extends Player implements Monster{
 		}
 	}
 }
+
+
+
+
