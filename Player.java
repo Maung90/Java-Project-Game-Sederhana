@@ -20,7 +20,8 @@ class Player{
 		this.hp = hp;
 		this.defend = defend;
 		this.baseDamage = baseDamage;
-	} 
+	}
+	
 	public void showPlayer(){
 		System.out.println("Name Char    : " + this.name);
 		System.out.println("HP           : " + this.hp);

@@ -16,7 +16,8 @@ public class Main extends Pertempuran{
 			int pil1 = choose();
 			switch(pil1){
 			case 1 : 
-				duel.showPlayer(); duel.sleep(4);
+				duel.showPlayer(); 
+				duel.sleep(4);
 				break;
 			case 2 : 
 				quest(); 
@@ -49,6 +50,20 @@ public class Main extends Pertempuran{
 				chooseArmor();
 				duel.sleep(2);
 				break;
+				/* REVISI */
+			case 6 : 
+				duel.showQuest();
+				System.out.println("---> Pilih Quest Yang Akan DiUbah <---");
+				int questChoose = choose();
+				input.nextLine();
+				duel.cls();
+				System.out.println("\t\t  Ubah :  " + duel.quest.get(questChoose-1) );
+				System.out.print("\t\t Masukan Perubahan : ");
+				String ubahQuest = input.nextLine();
+				duel.quest.set(questChoose-1,ubahQuest);
+				duel.sleep(2);
+				break;
+				/* TUTUP REVISI */
 			default : 
 				return;
 			}	
@@ -80,6 +95,7 @@ public class Main extends Pertempuran{
 		System.out.println("\t█          3. Item's                  █");
 		System.out.println("\t█          4. Pilih Senjata           █");
 		System.out.println("\t█          5. Pilih Armor             █");
+		System.out.println("\t█          6. Update Quest            █");
 		System.out.println("\t█          ... Exit                   █");
 		System.out.println("\t█                                     █");
 		System.out.println("\t▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀");

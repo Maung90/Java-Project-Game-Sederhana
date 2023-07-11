@@ -24,7 +24,7 @@ class Animation{
 			System.out.println("                                ");
 			System.out.println("    @                     _@   ");
 			System.out.println("   /|\\                     |\\   ");
-			System.out.println("___/ \\____________________/ \\___");
+			System.out.println("___/ \\____________________/ \\___"); 
 			sleep(500);
 			cls();
 			System.out.println("                                ");
@@ -36,7 +36,7 @@ class Animation{
 			System.out.println("    @                   . _@   ");
 			System.out.println("   /|\\                     |\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -47,7 +47,7 @@ class Animation{
 			System.out.println("    @                 o-  _@   ");
 			System.out.println("   /|\\                     |\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -58,7 +58,7 @@ class Animation{
 			System.out.println("    @                o-   _@   ");
 			System.out.println("   /|\\                     |\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -69,7 +69,7 @@ class Animation{
 			System.out.println("    @               O-    _@   ");
 			System.out.println("   /|\\                     |\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -80,7 +80,7 @@ class Animation{
 			System.out.println("    @             O-      _@   ");
 			System.out.println("   /|\\                     |\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -91,7 +91,7 @@ class Animation{
 			System.out.println("    @           O-      o-_@   ");
 			System.out.println("   /|\\                     |\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -102,7 +102,7 @@ class Animation{
 			System.out.println("    @         O-      o-  _@   ");
 			System.out.println("   /|\\                     |\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -113,7 +113,7 @@ class Animation{
 			System.out.println("    @       O-      o-    _@   ");
 			System.out.println("   /|\\                     |\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -124,7 +124,7 @@ class Animation{
 			System.out.println("    @     O-      O-      _@   ");
 			System.out.println("   /|\\                     |\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -135,7 +135,7 @@ class Animation{
 			System.out.println("    @   O-      O-        _@   ");
 			System.out.println("   /|\\                     |\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -146,7 +146,7 @@ class Animation{
 			System.out.println("    @ O-      O-          _@   ");
 			System.out.println("   /|\\                     |\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -157,7 +157,7 @@ class Animation{
 			System.out.println("    @O-     O-            _@   ");
 			System.out.println("   /|\\                     |\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -168,7 +168,7 @@ class Animation{
 			System.out.println("    @*     O-             _@   ");
 			System.out.println("   /|\\                     |\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -176,10 +176,10 @@ class Animation{
 			System.out.println("                         " + enemyName);
 			System.out.println("                         " + hpEnemy + "hp");
 			System.out.println("                                ");
-			System.out.println("    @    O-               _@   ");
+			System.out.println("    @    O-                _@   ");
 			System.out.println("   /|*                      |\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -187,10 +187,10 @@ class Animation{
 			System.out.println("                         " + enemyName);
 			System.out.println("                         " + hpEnemy + "hp");
 			System.out.println("                                ");
-			System.out.println("    @  O-                 _@   ");
+			System.out.println("    @  O-                  _@   ");
 			System.out.println("   /|*                      |\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -198,10 +198,10 @@ class Animation{
 			System.out.println("                         " + enemyName);
 			System.out.println("                         " + hpEnemy + "hp");
 			System.out.println("                                ");
-			System.out.println("    @ O-                  _@   ");
+			System.out.println("    @ O-                   _@   ");
 			System.out.println("   /|*                      |\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -209,10 +209,10 @@ class Animation{
 			System.out.println("                         " + enemyName);
 			System.out.println("                         " + hpEnemy + "hp");
 			System.out.println("                                ");
-			System.out.println("    @O-                   _@   ");
+			System.out.println("    @O-                    _@   ");
 			System.out.println("   /|*                      |\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -220,10 +220,10 @@ class Animation{
 			System.out.println("                         " + enemyName);
 			System.out.println("                         " + hpEnemy + "hp");
 			System.out.println("                                ");
-			System.out.println("    @*                    _@   ");
+			System.out.println("    @*                     _@   ");
 			System.out.println("   /|*                      |\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			for (int i=0; i<1; i++ ) {
 				cls();
 				System.out.println("                                ");
@@ -232,7 +232,7 @@ class Animation{
 				System.out.println("                         " + enemyName);
 				System.out.println("                         " + hpEnemy + "hp");
 				System.out.println("                                ");
-				System.out.println("    @*                     _@   ");
+				System.out.println("    @*                    _@   ");
 				System.out.println("   /|\\                     |\\   ");
 				System.out.println("___/ *_____________________/ \\___");
 				sleep(50);
@@ -271,7 +271,7 @@ class Animation{
 				sleep(50);
 				cls();
 				System.out.println("                                ");
-				System.out.println("    @*?                   _@   ");
+				System.out.println("    @*?                    _@   ");
 				System.out.println("   /#*                      |\\   ");
 				System.out.println("___/?______________________/ \\___");
 				sleep(50);
@@ -282,7 +282,7 @@ class Animation{
 				System.out.println("                         " + enemyName);
 				System.out.println("                         " + hpEnemy + "hp");
 				System.out.println("                                ");
-				System.out.println("  * @*?                   _@   ");
+				System.out.println("  * @*?                    _@   ");
 				System.out.println("   /#*                      |\\   ");
 				System.out.println("___*_______________________/ \\___");
 				sleep(50);
@@ -293,7 +293,7 @@ class Animation{
 				System.out.println("                         " + enemyName);
 				System.out.println("                         " + hpEnemy + "hp");
 				System.out.println("                                ");
-				System.out.println("  * @*?                   _@   ");
+				System.out.println("  * @*?                    _@   ");
 				System.out.println("   ?#*                      |\\   ");
 				System.out.println("___________________________/ \\___");
 				sleep(50);
@@ -304,7 +304,7 @@ class Animation{
 				System.out.println("                         " + enemyName);
 				System.out.println("                         " + hpEnemy + "hp");
 				System.out.println("                                ");
-				System.out.println("  * **?                   _@   ");
+				System.out.println("  * **?                    _@   ");
 				System.out.println("    #*                      |\\   ");
 				System.out.println("___________________________/ \\___");
 				sleep(50);
@@ -315,7 +315,7 @@ class Animation{
 				System.out.println("                         " + enemyName);
 				System.out.println("                         " + hpEnemy + "hp");
 				System.out.println("                                ");
-				System.out.println("  * **                    _@   ");
+				System.out.println("  * **                     _@   ");
 				System.out.println("    #*                      |\\   ");
 				System.out.println("___________________________/ \\___");
 				sleep(50);
@@ -326,7 +326,7 @@ class Animation{
 				System.out.println("                         " + enemyName);
 				System.out.println("                         " + hpEnemy + "hp");
 				System.out.println("                                ");
-				System.out.println("  * **                    _@   ");
+				System.out.println("  * **                     _@   ");
 				System.out.println("   *                        |\\   ");
 				System.out.println("___________________________/ \\___");
 				sleep(50);
@@ -337,7 +337,7 @@ class Animation{
 				System.out.println("                         " + enemyName);
 				System.out.println("                         " + hpEnemy + "hp");
 				System.out.println("                                ");
-				System.out.println("  *  *                    _@   ");
+				System.out.println("  *  *                     _@   ");
 				System.out.println("                            |\\   ");
 				System.out.println("___________________________/ \\___");
 				sleep(50);
@@ -361,7 +361,7 @@ class Animation{
 				System.out.println("                         " + enemyName);
 				System.out.println("                         " + hpEnemy + "hp");
 				System.out.println("                                ");
-				System.out.println("    @                      _@   ");
+				System.out.println("    @                     _@   ");
 				System.out.println("   /|\\                     |\\   ");
 				System.out.println("___/ \\____________________/ \\___");
 				sleep(100);
@@ -425,7 +425,7 @@ class Animation{
 			System.out.println("    @_╦                     @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -436,7 +436,7 @@ class Animation{
 			System.out.println("    @_╦<-                   @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -447,7 +447,7 @@ class Animation{
 			System.out.println("    @_╦<- -                 @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -458,7 +458,7 @@ class Animation{
 			System.out.println("    @_╦<- --                @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -469,7 +469,7 @@ class Animation{
 			System.out.println("    @_╦<- ---               @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -480,7 +480,7 @@ class Animation{
 			System.out.println("    @_╦<- ----              @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -491,7 +491,7 @@ class Animation{
 			System.out.println("    @_╦<- -----             @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -502,7 +502,7 @@ class Animation{
 			System.out.println("    @_╦<- ------            @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -513,7 +513,7 @@ class Animation{
 			System.out.println("    @_╦<- -------           @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -524,7 +524,7 @@ class Animation{
 			System.out.println("    @_╦<- --------          @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -535,7 +535,7 @@ class Animation{
 			System.out.println("    @_╦<- ---------         @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -546,7 +546,7 @@ class Animation{
 			System.out.println("    @_╦<- ----------       @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -557,7 +557,7 @@ class Animation{
 			System.out.println("    @_╦<- -----------       @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -568,7 +568,7 @@ class Animation{
 			System.out.println("    @_╦<- ------------      @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);;
@@ -579,7 +579,7 @@ class Animation{
 			System.out.println("    @_╦<- -------------     @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);;
@@ -590,7 +590,7 @@ class Animation{
 			System.out.println("    @_╦<- --------------    @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);;
@@ -601,7 +601,7 @@ class Animation{
 			System.out.println("    @_╦      ---------------@    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -612,7 +612,7 @@ class Animation{
 			System.out.println("    @_╦          -----------@    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -623,7 +623,7 @@ class Animation{
 			System.out.println("    @_╦              -------@    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -634,7 +634,7 @@ class Animation{
 			System.out.println("    @_╦                  ---@    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			for (int i=0; i<1; i++ ) {
 				cls();
 				System.out.println("                                ");
@@ -844,7 +844,7 @@ class Animation{
 			System.out.println("    @_   --->              @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -855,7 +855,7 @@ class Animation{
 			System.out.println("    @_    ---->           @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -866,7 +866,7 @@ class Animation{
 			System.out.println("    @_      >----->        @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -877,7 +877,7 @@ class Animation{
 			System.out.println("    @_        >----->      @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -888,7 +888,7 @@ class Animation{
 			System.out.println("    @_          >----->    @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -899,7 +899,7 @@ class Animation{
 			System.out.println("    @_            >----->  @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -910,7 +910,7 @@ class Animation{
 			System.out.println("    @_             >-----> @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -921,7 +921,7 @@ class Animation{
 			System.out.println("    @_              >----->@    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -932,7 +932,7 @@ class Animation{
 			System.out.println("    @_                  >--@-->    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			for (int i=0; i<1; i++ ) {
 				cls();
 				System.out.println("                                ");
@@ -1142,7 +1142,7 @@ class Animation{
 			System.out.println("    @_~╦~╦<-                @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -1153,7 +1153,7 @@ class Animation{
 			System.out.println("    @_~╦~╦<-                @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -1164,7 +1164,7 @@ class Animation{
 			System.out.println("    @_~╦~╦<-  -             @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -1175,7 +1175,7 @@ class Animation{
 			System.out.println("    @_~╦~╦<-  - -           @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -1186,7 +1186,7 @@ class Animation{
 			System.out.println("    @_~╦~╦<-  - - -         @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -1197,7 +1197,7 @@ class Animation{
 			System.out.println("    @_~╦~╦<-  - - - -       @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -1208,7 +1208,7 @@ class Animation{
 			System.out.println("    @_~╦~╦<-  - - - - -     @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -1219,7 +1219,7 @@ class Animation{
 			System.out.println("    @_~╦~╦<-  - - - - - -   @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -1230,7 +1230,7 @@ class Animation{
 			System.out.println("    @_~╦~╦<-  - - - - - - - @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -1241,7 +1241,7 @@ class Animation{
 			System.out.println("    @_~╦~╦<-    - - - - - - @    ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -1252,7 +1252,7 @@ class Animation{
 			System.out.println("    @_~╦~╦<-      - - - - - @-   ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -1263,7 +1263,7 @@ class Animation{
 			System.out.println("    @_~╦~╦<-        - - - - @-   ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -1275,7 +1275,7 @@ class Animation{
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
 
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -1286,7 +1286,7 @@ class Animation{
 			System.out.println("    @_~╦~╦<-            - - @-   ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -1297,7 +1297,7 @@ class Animation{
 			System.out.println("    @_~╦~╦<-              - @-   ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -1308,7 +1308,7 @@ class Animation{
 			System.out.println("    @_~╦~╦<-               -@   ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			cls();
 			System.out.println("                                ");
 			System.out.println("  " + playerName);
@@ -1319,7 +1319,7 @@ class Animation{
 			System.out.println("    @_~╦~╦<-               @-   ");
 			System.out.println("   /|                      /|\\   ");
 			System.out.println("___/ \\____________________/ \\___");
-			sleep(20);
+			sleep(50);
 			for (int i=0; i<1; i++ ) {
 				cls();
 				System.out.println("                                ");

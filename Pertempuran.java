@@ -23,7 +23,7 @@ public class Pertempuran extends Player implements Monster{
 		Items item8 = new Items("HELM-KAYU",230,"armor");
 		Items item9 = new Items("PISTOL",200,"senjata");
 		Items item10 = new Items("HELM-BESI",200,"armor");
-		Items item11 = new Items("MACHINEGUN",300,"senjata");
+		Items item11 = new Items("MACHINEGUN",300,"senjata"); 
 		Items item12 = new Items("HELM-BAJA",250,"armor");
 
 		items.add(item);
@@ -230,8 +230,8 @@ public class Pertempuran extends Player implements Monster{
 						System.out.println("                                ");
 						System.out.println("                                ");
 						System.out.println("  \\@/                           ");
-						System.out.println("    |                          ");
-						System.out.println("___/ \\__________________________");
+						System.out.println("   |                          ");
+						System.out.println("__/ \\__________________________");
 						System.out.println("    "+ namaMonster + i+ " telah Kalah");
 						sleep(1);
 						break;
@@ -271,8 +271,7 @@ public class Pertempuran extends Player implements Monster{
 		}catch(Exception E){
 			System.out.println("Tidak Bisa Clear Screen");
 		}
-	}
-	// overloading dari class player
+	} 
 	public void sleep(long n){
 		long second = n * 1000;
 		try{
@@ -281,8 +280,4 @@ public class Pertempuran extends Player implements Monster{
 			System.err.println(e);
 		}
 	}
-}
-
-
-
-
+} 

@@ -1,4 +1,4 @@
-class Items{
+ class Items{
 	private String nameItem;
 	private int itemEffect;
 	private String jenis;
