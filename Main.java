@@ -125,11 +125,11 @@ public class Main extends Pertempuran{
 					int a = choose();
 					status = duel.prosesQuest(a);
 					if (status) {
-						System.out.println("\t|=======================================|");
-						System.out.println("\t|                                       |");
-						System.out.println("\t|                Level Up               |");
-						System.out.println("\t|                                       |");
-						System.out.println("\t|=======================================|");
+						System.out.println("|=======================================|");
+						System.out.println("|                                       |");
+						System.out.println("|                Level Up               |");
+						System.out.println("|                                       |");
+						System.out.println("|=======================================|");
 						duel.setLevel(1);
 						duel.setHp(duel.getHp(),duel.getLevel(),100);
 					}
@@ -194,6 +194,7 @@ public class Main extends Pertempuran{
 				}else{
 					duel.setWeapon(selectWeapon);
 					duel.setDamageWeapon(duel.itemPlayer.get(exist-1).getItemEffect());
+					duel.itemPlayer.remove(exist-1);
 				}
 			}else{
 				System.out.println("\t|=======================================|");
@@ -248,6 +249,7 @@ public class Main extends Pertempuran{
 				}else{
 					duel.setNameArmor(selectArmor);
 					duel.setDefend(duel.itemPlayer.get(exist-1).getItemEffect());
+					duel.itemPlayer.remove(exist-1);
 				}
 			}else{
 				System.out.println("\t      Belum Memiliki Armor  ");

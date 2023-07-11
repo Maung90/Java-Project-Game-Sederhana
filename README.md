@@ -10,6 +10,8 @@
 ## 4 Pilar OOP
 1. Inheritance (Pewarisan) : done
 2. Polimorfisme (overloading & overriding)
+overreading : method sma , isi beda
+overloading : nama sama , beda parameter 
 3. Abstraction (abstract class) : done
 4. Encapsulasi (getter & setter) : done
 

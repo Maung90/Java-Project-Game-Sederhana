@@ -12,17 +12,18 @@ public class Pertempuran extends Player implements Monster{
 	public Scanner input = new Scanner(System.in);
 
 	public void initItems(){
-		Items item = new Items("BAMBU",150,"senjata");
+		Items item = new Items("TONGKAT",150,"senjata");
 		Items item2 = new Items("ZIRAH-KAYU",130,"armor");
-		Items item3 = new Items("PEDANG",200,"senjata");
+		Items item3 = new Items("PANAH",200,"senjata");
 		Items item4 = new Items("ZIRAH-BESI",200,"armor");
-		Items item5 = new Items("KATANA",250,"senjata");
+		Items item5 = new Items("BOM",250,"senjata");
 		Items item6 = new Items("ZIRAH-BAJA",300,"armor");
-		Items item7 = new Items("TONGKAT",150,"senjata");
+
+		Items item7 = new Items("KAPAK",150,"senjata");
 		Items item8 = new Items("HELM-KAYU",230,"armor");
-		Items item9 = new Items("TOMBAK",200,"senjata");
+		Items item9 = new Items("PISTOL",200,"senjata");
 		Items item10 = new Items("HELM-BESI",200,"armor");
-		Items item11 = new Items("PISTOL",300,"senjata");
+		Items item11 = new Items("MACHINEGUN",300,"senjata");
 		Items item12 = new Items("HELM-BAJA",250,"armor");
 
 		items.add(item);
@@ -66,11 +67,10 @@ public class Pertempuran extends Player implements Monster{
 
 		baseDamageMonster.add(200);
 		baseDamageMonster.add(250);
-		baseDamageMonster.add(350);
+		baseDamageMonster.add(700);
 
 	}
-	public void initQuest(){
-
+	public void initQuest(){ 
 		quest.add("Membunuh pasukan slime");
 		quest.add("Membunuh pasukan goblin");
 		quest.add("Membunuh pasukan Demon");
@@ -84,27 +84,27 @@ public class Pertempuran extends Player implements Monster{
 		System.out.println("\t▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀");
 		System.out.println("\t█                                            █");
 		System.out.println("\t█                                            █");
-			for (int i = 1; i <= quest.size(); i++ ) {
-				System.out.println("  \t\t" + i + " " + quest.get(i-1) );
-			}
+		for (int i = 1; i <= quest.size(); i++ ) {
+			System.out.println("  \t\t" + i + " " + quest.get(i-1) );
+		}
 		System.out.println("\t█                                            █");
 		System.out.println("\t█                                            █");
 		System.out.println("\t▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀");
 		
-		 
+		
 	} 
 	public boolean prosesQuest(int a){
 		initItems();
 		boolean status = false;
-		int senjata = getDamageWeapon(); 
+		// int senjata = getDamageWeapon(); 
 		int armor = getDefend();
 		System.out.println("\t|=======================================|");
 		System.out.println("\t|                                       |");
 		System.out.println("\t \t "+quest.get(a-1));
 		System.out.println("\t|                                       |");
 		System.out.println("\t|=======================================|");
-
-		status = battle(senjata,armor,a);
+		sleep(1);
+		status = battle(armor,a);
 		if (status) {
 
 			System.out.println("|=======================================|");
@@ -130,68 +130,7 @@ public class Pertempuran extends Player implements Monster{
 		return status;
 
 	}
-	public boolean battle(int senjata, int armor,int a){
-		initMonsterData();
-		boolean tf = true;	
-		int hpPlayer = getHp()+armor;
-		int i=1,wave = 3;
-		while(tf = true) {
-			int hpEnemy = hpMonster.get(a-1);
-			String namaMonster = jenisMonster.get(a-1);
-			int damageMonster = baseDamageMonster.get(a-1);
-			while(tf == true){
-				sleep(1);
-				cls();
-				System.out.println("INI WAVE KE : " + i);
-				System.out.println("|=======================================|");
-				System.out.println("|                                       |");
-				System.out.println(" Hp "+getName()+"  \t\t Hp "+namaMonster);
-				System.out.println("    "+hpPlayer+" \t\t    "+hpEnemy);
-				System.out.println("|                                       |");
-				System.out.println("|=======================================|");
-				if (hpPlayer <= 0) {
-					hpPlayer = 0;
-					cls();
-					System.out.println("|=======================================|");
-					System.out.println("|                                       |");
-					System.out.println(" Hp "+getName()+"  \t\t\t Hp "+namaMonster);
-					System.out.println("   "+hpPlayer+" \t\t\t    "+hpEnemy);
-					System.out.println("\n"+getName() + " telah Kalah ");
-					tf = false;
-					break;
-				}else{
-					int damageEnemy = terimaDamageMonster(damageMonster);
-					hpPlayer -= damageEnemy;
-					System.out.println("\n"+namaMonster + " memberikan damage sebesar : " +damageEnemy);
-				} 
-
-				if (hpEnemy <= 0) {
-					hpEnemy = 0;
-					cls();
-					System.out.println("|=======================================|");
-					System.out.println("|                                       |");
-					System.out.println(" Hp "+getName()+"  \t\t Hp "+namaMonster);
-					System.out.println("   "+hpPlayer+" \t\t    "+hpEnemy);
-					System.out.println("      "+ namaMonster + " telah Kalah");
-					System.out.println("|                                       |");
-					System.out.println("|=======================================|");
-					break;
-				}else{
-					int damagePlayer = terimaDamagePlayer(getBaseDamage(),senjata);
-					hpEnemy -= damagePlayer;
-					System.out.println(getName() + " memberikan damage sebesar : " +damagePlayer);
-				}
-				System.out.println("|                                       |");
-				System.out.println("|=======================================|");
-				sleep(2);
-			}
-			i++;
-			if (i > 3 || tf == false) {
-				break;
-			}
-		}
-		return tf;
-	}
+	
 	//overreading dari class player
 	public void showPlayer(){
 		cls();
@@ -214,7 +153,6 @@ public class Pertempuran extends Player implements Monster{
 	public Items gachaItem() {
 		Random dice = new Random();
 		int index = dice.nextInt(0,items.size());
-		// System.out.println(items.get(index).getNameItem());
 		itemPlayer.add(items.get(index));
 		sleep(1);
 		return items.get(index);
@@ -223,7 +161,98 @@ public class Pertempuran extends Player implements Monster{
 		Random dice = new Random();
 		int damagePlayer = dice.nextInt(50,maxDamagePlayer);
 		return damagePlayer;
-	} 	
+	}
+
+
+	public boolean battle( int armor,int a){
+		initMonsterData();
+		boolean kondisi1 = true,kondisi2 = true;	
+		int hpPlayer = getHp()+armor;
+		int i=1;
+		int senjata = getDamageWeapon();
+		String weaponName = getWeapon();
+		while(kondisi1 = true) {
+			int hpEnemy = hpMonster.get(a-1);
+			String namaMonster = jenisMonster.get(a-1);
+			int damageMonster = baseDamageMonster.get(a-1);
+
+			cls();
+			System.out.println("\n\t\tWAVE " + i);
+			sleep(1);
+			while(kondisi1 == true){
+
+				if (hpEnemy > 0 || hpPlayer > 0) {
+					if (hpPlayer > 0) {
+						int damageEnemy = terimaDamageMonster(damageMonster);
+						Animation.enemyAttack(getName(),namaMonster,hpPlayer,hpEnemy,damageEnemy);
+						hpPlayer -= damageEnemy;
+					}
+
+					if (hpEnemy > 0) { 
+						int damagePlayer = terimaDamagePlayer(getBaseDamage(),senjata);
+						if (weaponName.equalsIgnoreCase("PISTOL")) {
+							Animation.playerAttackPistol(getName(),namaMonster,hpPlayer,hpEnemy,damagePlayer);
+
+						}else if (weaponName.equalsIgnoreCase("PANAH")) {
+							Animation.playerAttackPanah(getName(),namaMonster,hpPlayer,hpEnemy,damagePlayer);
+
+						}else if (weaponName.equalsIgnoreCase("KAPAK")) {
+							Animation.playerAttackKapak(getName(),namaMonster,hpPlayer,hpEnemy,damagePlayer);
+
+						}else if (weaponName.equalsIgnoreCase("MACHINEGUN")) {
+							Animation.playerAttackMachineGun(getName(),namaMonster,hpPlayer,hpEnemy,damagePlayer);
+
+						}else if (weaponName.equalsIgnoreCase("TONGKAT")) {
+							Animation.playerAttackTongkat(getName(),namaMonster,hpPlayer,hpEnemy,damagePlayer);
+
+						}else if (weaponName.equalsIgnoreCase("BOM")) {
+							Animation.playerAttackBom(getName(),namaMonster,hpPlayer,hpEnemy,damagePlayer);
+
+						}
+						hpEnemy -= damagePlayer;
+					}
+
+					if (hpPlayer <= 0) {
+						cls();
+						System.out.println("                                ");
+						System.out.println("                          \\@/   ");
+						System.out.println("                            |   ");
+						System.out.println("___________________________/ \\___");
+						System.out.println("                                  ");
+						System.out.println("    "+getName() + " telah Kalah ");
+						sleep(1);
+						kondisi1 = false;
+						break;
+					}
+
+					if (hpEnemy <= 0) {
+						cls();
+						System.out.println("                                ");
+						System.out.println("                                ");
+						System.out.println("  \\@/                           ");
+						System.out.println("    |                          ");
+						System.out.println("___/ \\__________________________");
+						System.out.println("    "+ namaMonster + i+ " telah Kalah");
+						sleep(1);
+						break;
+					}
+					
+
+				}else{
+					kondisi2 = false;
+					break;
+				}
+			}
+			
+			i++;
+			if (i > 3 || kondisi1 == false) {
+				break;
+			}
+		}
+		return kondisi1;
+	}
+
+
 	public void welcomeKalimat(){
 		cls();
 		System.out.println("\n\n\n");

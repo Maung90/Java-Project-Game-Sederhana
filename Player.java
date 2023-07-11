@@ -1,7 +1,7 @@
 import java.util.Random;
 class Player{
 	private String name;
-	private String weapon = "batu"; // nama senjata
+	private String weapon = "TONGKAT"; // nama senjata
 	private String nameArmor = "-"; // nama defend
 	private int hp;
 	private int damageWeapon; // damage senjata
