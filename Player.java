@@ -27,14 +27,7 @@ class Player{
 		System.out.println("Weapon       : " + this.weapon);
 		System.out.println("Defend       : " + this.defend);
 		System.out.println("Base Damage  : " + this.baseDamage);
-	}
-	public void sleep(){
-		try{
-			Thread.sleep(1000);
-		}catch(Exception e){
-			System.err.println(e);
-		}
-	}
+	} 
 	// terima damage
 	public int terimaDamageMonster(int maxDamageEnemy){
 		Random dice = new Random();
